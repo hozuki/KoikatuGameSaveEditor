@@ -1,4 +1,4 @@
-# Koikatu Save Game Editor
+# Koikatu Game Save Editor
 
 A simple [Koikatu](http://www.illusion.jp/preview/koikatu/index.php) (コイカツ！) save game editor written in C#.
 
