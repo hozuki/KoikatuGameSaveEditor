@@ -4,6 +4,8 @@ A simple [Koikatu](http://www.illusion.jp/preview/koikatu/index.php) (コイカ�
 
 Save data structure is based on [KoikatuSaveDataEdit](https://github.com/kiletw/KoikatuSaveDataEdit).
 
+[Downloads](https://github.com/hozuki/KoikatuGameSaveEditor/releases)
+
 ## Features
 
 - Reading/modifying some properties in the save, obviously.
