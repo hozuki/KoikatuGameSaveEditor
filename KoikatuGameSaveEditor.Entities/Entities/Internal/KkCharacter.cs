@@ -104,7 +104,8 @@ namespace KGSE.Entities.Internal {
         }
 
         public void SetAnswer([NotNull] string key, bool preference) {
-            SetBooleanPreference(Answers, key, preference, "answer");
+            // Not my typo...
+            SetBooleanPreference(Answers, key, preference, "awnser");
         }
 
         [NotNull]

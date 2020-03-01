@@ -101,11 +101,11 @@ namespace KGSE.IO {
                             var exData = stream.ReadExact(len2);
 
                             using (var memory = new MemoryStream()) {
-                                BinaryIo.WriteByte(stream, len1);
-                                stream.Write(marker);
-                                BinaryIo.WriteInt32LE(stream, version);
-                                BinaryIo.WriteInt32LE(stream, len2);
-                                stream.Write(exData);
+                                BinaryIo.WriteByte(memory, len1);
+                                memory.Write(marker);
+                                BinaryIo.WriteInt32LE(memory, version);
+                                BinaryIo.WriteInt32LE(memory, len2);
+                                memory.Write(exData);
 
                                 r.ExtraData = memory.ToArray();
                             }
