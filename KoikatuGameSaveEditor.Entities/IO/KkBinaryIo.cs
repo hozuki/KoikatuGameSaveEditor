@@ -165,8 +165,8 @@ namespace KGSE.IO {
             return u;
         }
 
-        public static void WriteUInt16LE([NotNull] byte[] span, ushort value) {
-            Trace.Assert(span.Length >= 2);
+        public static void WriteUInt16LE([NotNull] byte[] span, ushort value, int offset) {
+            Trace.Assert(span.Length >= 2 + offset);
 
             if (!BitConverter.IsLittleEndian) {
                 value = SwapEndian(value);
@@ -174,7 +174,7 @@ namespace KGSE.IO {
 
             var bytes = BitConverter.GetBytes(value);
 
-            Array.Copy(bytes, span, bytes.Length);
+            Array.Copy(bytes, 0, span, offset, bytes.Length);
         }
 
         public string ReadUtf8String([NotNull] Stream stream) {

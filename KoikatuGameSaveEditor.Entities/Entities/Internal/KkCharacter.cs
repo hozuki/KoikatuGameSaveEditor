@@ -215,11 +215,9 @@ namespace KGSE.Entities.Internal {
                 throw new InvalidOperationException("Cannot set value to a placeholder.");
             }
 
-            var a = k.SubArray(2);
-
             var mapped = PercentageKeyMap[value];
 
-            KkBinaryIo.WriteUInt16LE(a, mapped);
+            KkBinaryIo.WriteUInt16LE(k, mapped, 2);
         }
 
         [CanBeNull]

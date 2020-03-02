@@ -260,6 +260,14 @@ namespace KGSE.UI {
         }
 
         private void SaveCurrentSaveGameTo([NotNull] string path) {
+            foreach (var o in mainPanel.Tiles) {
+                var control = o as ICharacterControl;
+
+                Trace.Assert(control != null);
+
+                control.SaveToCharacter();
+            }
+
             Trace.Assert(_saveData != null, nameof(_saveData) + " != null");
 
             try {
