@@ -13,9 +13,10 @@ namespace KGSE.Entities {
         public override Gender Gender => Gender.Male;
 
         // 0 to 100
+        // WTF not Intelligence?
         public int Intelligence {
-            get => InternalCharacter.Intellect ?? 0;
-            set => InternalCharacter.Intellect = value;
+            get => InternalCharacter.Intelligence2 ?? 0;
+            set => InternalCharacter.Intelligence2 = value;
         }
 
         // 0 to 100

@@ -262,7 +262,6 @@ namespace KGSE.Entities.Internal {
         [CanBeNull]
         public byte[] Unknown3 { get; internal set; }
 
-        // Intelligence field for females. Do not read from Parameters.
         [CanBeNull]
         public int? Intelligence2 { get; internal set; }
 
